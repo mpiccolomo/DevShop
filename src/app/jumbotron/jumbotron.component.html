@@ -1,0 +1,17 @@
+<!--notare il tag <ng-container *ngIf="ShShowButtonow"> per vedere i 2 bottoni Accedi e Registrati
+  legati a 2 variabili in jumbotron.component.ts(vedere il commento in login.componrnt.html -->
+  <div class="jumbotron jumbotron-billboard">
+    <div class="img"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>{{accedi_tit}}</h2>
+            <p>{{registrati_sottot}}</p>
+            <ng-container *ngIf="ShowButton">
+              <a href="" id="SignUp" class="btn btn btn-primary btn-lg">Accedi</a>
+              <a href="" id="SignIn" class="btn btn-success btn-lg">Registrati</a>
+            </ng-container>
+          </div>
+        </div>
+    </div>
+  </div>
