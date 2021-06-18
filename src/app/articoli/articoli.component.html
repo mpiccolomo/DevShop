@@ -1,25 +1,38 @@
-<h1>Articoli Disponibili</h1>
+<app-jumbotron [accedi_tit]="'Ricerca Articoli'" [registrati_sottot]="'Ricerca gli articoli per descrizione o codice'" [ShowButton]="false"></app-jumbotron>
 
-<table id="articoli" border="3">
-  <caption>Alimentari</caption>
-  <thead>
-      <tr>
+<section class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <h3 class="page-title">Risultati Ricerca: <small>Trovati {{NumArt}} Articoli</small></h3>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <a href="" style="margin-left: 20px;" class="btn btn-success float-right">Nuovo Articolo</a>
+    </div>
+    <table id="articoli" class="table table-striped table-bordered">
+      <thead>
+        <tr>
           <th>CodArt</th>
           <th>Descrizione</th>
           <th>Um</th>
           <th>Pezzi</th>
           <th>Peso(KG/LT)</th>
           <th>Prezzo</th>
-      </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let articolo of articoli">
-        <td>{{articolo.codart}}</td>
-        <td>{{articolo.descrizione}}</td>
-        <td>{{articolo.um}}</td>
-        <td>{{articolo.pzcart}}</td>
-        <td>{{articolo.peso}}</td>
-        <td>{{articolo.prezzo}}</td>
-    </tr>
-  </tbody>
-</table>
+          <th>Attivo</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let articolo of articoli">
+            <td>{{articolo.codart}}</td>
+            <td class="text-left">{{articolo.descrizione}}</td>
+            <td>{{articolo.um}}</td>
+            <td>{{articolo.pzcart}}</td>
+           <!-- <td>{{articolo.pesoNetto}}</td>
+            <td class="text-right">{{articolo.prezzo | currency:'EUR'}}</td>
+            <td>{{articolo.idStatoArt}}</td>
+            <td>{{articolo.dataCreaz | date}}</td>-->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
