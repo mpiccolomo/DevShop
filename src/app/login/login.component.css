@@ -22,12 +22,11 @@
   padding: 1.5%;
   border: none;
   cursor: pointer;
-  color: rgb(255, 255, 0);
 }
 .login-form .btnSubmit{
   font-weight: 600;
-  color: rgb(255, 255, 255);
-  background-color: #00cc33;
+  color: #fff;
+  background-color: #0062cc;
 }
 .login-form .ForgetPwd{
   color: #0062cc;

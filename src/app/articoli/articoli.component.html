@@ -1,4 +1,5 @@
-<app-jumbotron [accedi_tit]="'Ricerca Articoli'" [registrati_sottot]="'Ricerca gli articoli per descrizione o codice'" [ShowButton]="false"></app-jumbotron>
+
+<app-jumbotron [Titolo]="'Ricerca Articoli'" [SottoTitolo]="'Ricerca gli articoli per descrizione o codice'" [Show]="false"></app-jumbotron>
 
 <section class="container">
   <div class="row">
@@ -27,10 +28,10 @@
             <td class="text-left">{{articolo.descrizione}}</td>
             <td>{{articolo.um}}</td>
             <td>{{articolo.pzcart}}</td>
-           <!-- <td>{{articolo.pesoNetto}}</td>
+            <td>{{articolo.peso}}</td>
             <td class="text-right">{{articolo.prezzo | currency:'EUR'}}</td>
-            <td>{{articolo.idStatoArt}}</td>
-            <td>{{articolo.dataCreaz | date}}</td>-->
+            <td>{{articolo.isactive}}</td>
+            <td>{{articolo.data}}</td>
         </tr>
       </tbody>
     </table>

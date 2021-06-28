@@ -1,3 +1,4 @@
+
 #SignUp {
 	margin-right: 0.5em;
 	width: 6em;
@@ -33,4 +34,9 @@
 	padding-top: 50px;
 	padding-bottom: 50px;
 	min-height: 150px;
+}
+
+.jumbotron .container {
+	position: relative;
+	z-index: 2;
 }

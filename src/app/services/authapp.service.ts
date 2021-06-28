@@ -10,20 +10,22 @@ import { Injectable } from '@angular/core';
  */
 
 
-@Injectable({
+ @Injectable({
   providedIn: 'root'
 })
-export class AutenticazioneAppService {
+export class AuthappService {
 
   constructor() { }
 
-  autentica(UserId: string, Password: string){
+  autentica = (UserId : string, Password : string): boolean => {
+
     if (UserId === 'Marco' && Password === '123ciao') {
       /*sessionStorage.setItem---> in questo modo se la psw e utente sono corretti
       salviamo l'utente loggato  e metteremo in piedi una session tramite una chiave e valore il questo caso proprio "UserId"
       tutto questo fino a quando non verrà effettuato il logout (in questo caso) per la verifica in modalità sviluppo
       andare ne gruppo application ci saranno la chiave ed il valore memorizzati nello station storage */
-      sessionStorage.setItem("Utente",UserId)
+
+      sessionStorage.setItem("Utente", UserId);
       return true;
       }else {
       return false;
@@ -39,6 +41,7 @@ export class AutenticazioneAppService {
   loggedUser(){
     /* dichiaro 1 variabile con let all'interno di un metodo come "var" */
     let utente = sessionStorage.getItem("Utente");
+
     /* operatore ternario se il nome Utente è !null restituisce il valore nella mia variabile Utente oppure stringa vuota */
     return (sessionStorage.getItem("Utente") != null) ? utente : "";
   }

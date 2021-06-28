@@ -1,6 +1,6 @@
-import { ArticoliDataService } from './../services/data/articoli-data.service';
-import { Component, OnInit } from '@angular/core';
 
+import { Component, OnInit } from '@angular/core';
+import { ArticoliDataService } from '../services/data/articoli-data.service';
 
 export class Articoli {
 
@@ -27,7 +27,7 @@ export class ArticoliComponent implements OnInit {
 
   NumArt = 0;
 
-  articoli: Articoli[] | undefined ;
+  articoli: Articoli[] | undefined;
 
   /*
   articoli = [

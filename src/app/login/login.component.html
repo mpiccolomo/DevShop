@@ -4,7 +4,7 @@ i 2 bottoni registrati e accedi si visualizzeranno solo prima di fare il login g
 (@Input() ShowButton: boolean = true) definita sempre in jumbotroncomponent.ts
 questa però viene definita
 nella pagina di benvenuto welcome.component.html visualizzata dopo il login-->
-<app-jumbotron [accedi_tit]="'Autenticazione'" [registrati_sottot]="'Inserisci la Userid e la Password'"></app-jumbotron>
+<app-jumbotron [Titolo]="'Autenticazione'" [SottoTitolo]="'Inserisci la Userid e la Password'"></app-jumbotron>
 
 
 <!--questa forma è organizzata con le classi di controllo fornite da bootstrap-->
@@ -13,13 +13,13 @@ nella pagina di benvenuto welcome.component.html visualizzata dopo il login-->
       <div class="col-md-6 login-form">
           <h3>Login Form </h3>
           <div class="form-group">
-              <input type="text" class="form-control"  id="userId" placeholder="Nome Utente" [(ngModel)] = "UserId" >
+              <input type="text" class="form-control"  id="userId" placeholder="Nome Utente" [(ngModel)] = "userid" >
           </div>
           <div class="form-group">
-              <input type="password" class="form-control"  id="password" placeholder="Password" [(ngModel)] = "Password">
+              <input type="password" class="form-control"  id="password" placeholder="Password" [(ngModel)] = "password">
           </div>
           <div class="form-group">
-              <button (click) = gestAutenticazioni() class="btnSubmit">Connetti</button>
+              <button (click) = gestAut() class="btnSubmit">Connetti</button>
           </div>
           <div class="form-group">
                   <a href="#" class="ForgetPwd">Password Dimenticata?</a>
